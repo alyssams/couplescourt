@@ -1,0 +1,162 @@
+$grey: #e3e3e3;
+$red: #7d1316;
+$black: #000000;
+$lightgrey: #a0a1a0;
+
+html {
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+}
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-default .navbar-nav>.active>a {
+  color: $red;
+  background-color: transparent;
+}
+
+.navbar {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+  .navbar-nav {
+    width: 100%;
+    text-align: center;
+    > li {
+      float: none;
+      display: inline-block;
+    }
+  }
+
+
+.carousel-indicators {
+  display: none !important;
+}
+
+.carousel {
+    height: 100vh;
+    width: 100%;
+    overflow:hidden;
+    margin: 0;
+  .carousel-inner {
+    height:100%;    
+  }
+  .carousel-inner > .item > img{
+    height: auto;
+    display:block;
+    object-fit: cover;
+  }
+  .item {
+    height: 100vh;
+    background: transparent;
+  }
+}
+
+.container-fluid .jumbotron {
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.info {
+  position: absolute;
+  bottom: 0;
+  z-index: 9;
+  padding: 0;
+  text-align: center;
+  .promo {
+    background-color: $black;
+    color: #333;
+  }
+  .myBackground {
+    background-color: $red;
+    color: #ffffff;
+  }
+}
+
+
+footer {
+  background-color: #e3e3e3;
+}
+
+// .info {
+//   h1, p {
+//     text-align: center;
+//   }
+//   .translucent {  
+//       position: absolute;
+//       /* top: 0; */
+//       bottom: 0;
+//       left: 0;
+//       height: 40%;
+//       width: 100%;
+//       color: white;
+//       background-color: #6b0b1f;
+//       opacity: 0.6; 
+//       -moz-opacity: 0.3;  
+//       filter:alpha(opacity=30);  
+//   } 
+//   .content {
+//     // background: #6b0b1f;
+//     // opacity: .5;
+//     color: white;
+//     position: relative;  
+//     width:100%; 
+//   }
+// }
+
+h3 {
+  display: inline-block;
+  padding: 10px;
+  background: #B9121B;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.full-screen {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.blok1 {
+  height: 100%;
+  background-image: url(http://cdn.wonderfulengineering.com/wp-content/uploads/2014/05/city-wallpaper-7.jpg);
+  background-position: center center;
+  background-size: cover; 
+}
+
+.finder-bg {
+  height: 100%;
+  background-image: url(../../media/images/finder_bg.png);
+  background-position: top center;
+  background-size: cover; 
+}
+
+footer {
+  padding: 40px;
+  font-size: 8px;
+  text-align: center;
+  color: $lightgrey;
+}
+
+
