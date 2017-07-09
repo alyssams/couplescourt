@@ -31,51 +31,155 @@
 <!-- NAVBAR
 ================================================== -->
   <body>
-    <nav class="navbar navbar-default" role="navigation">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+          <img class="navbar-brand" src="./../media/images/cc_logo.png" alt="">
         </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="/">Home</a></li>
-            <li><a href="/">Bio</a></li>
+            <li><a href="/bio">Bio</a></li>
             <li class="active"><a href="/finder">Station Finder</a></li>
             <li><a href="https://www.beoncouplescourt.tv" target="_blank">Be On Show</a></li>
-            <li class="social pull-right"><a href="#">Social Links</a></li>
+            <li class="social pull-right">
+              <ul>
+                <li class='twitter'><a href='https://twitter.com/CouplesCourt' target="_blank">Follow the Cutlers on Twitter</a></li>
+                <li class='facebook'><a href='https://www.facebook.com/CouplesCourt' target="_blank">Follow the Cutlers on Facebook</a></li>
+                <li class='instagram'><a href='http://instagram.com/CouplesCourt' target="_blank">Follow the Cutlers on Instagram</a></li>
+              </ul>
+            </li>
           </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
-    <div class="container-fluid finder-bg"></div>
-    <div class="container-fluid station"> 
-        <div class="jumbotron myBackground">
-          <h2>Don't Cheat...IF You Can't Take The Heat</h2>
-              <p class="lead">With over 30 years of law experience, Dana and Keith are trial attorneys specializing in education law and civil trials respectively. Together they manage their own law firm, James W. Tippin &amp; Associates.</p>
-              <p class="lead">Now, this extremely likable pair who have been married for 27 years are bringing their knowledge of the judicial system and their experience as husband and wife into the courtroom. In <em><b>Couples Court With The Cutlers</b></em>, Keith and Dana serve as passionate advocates for couples having problems with relationship dysfunction and distrust. The show utilizes cell phone forensics, GPS tracking, DNA evidence and other high-tech tactics to tackle "possible" infidelity head-on and help uncover the truth.</p>
         </div>
       </div>
-  
+    </div>
+      <div class="container-fluid finderbg"></div>
+      <img class="logo-bio" src="./../media/images/cc_logo.png" alt="">
+      <div class="row station-container">
+            <div class="col-lg-4 col-lg-offset-4">
+                <div class="finder-container">
+                    <div class="selector">
+                        <a href="#" class="toggle-list">
+                            <span class="title">select your state</span>
+                            <span class="arrows"></span>
+                        </a>
+                        <div class="state-list">
+                            <div class="list-container">
+                                <ul>
+                                    <li><a href="local-listings.php?state=Alabama">Alabama</a></li>
+                                    <li><a href="local-listings.php?state=Alaska">Alaska</a></li>
+                                    <li><a href="local-listings.php?state=Arizona">Arizona </a></li>
+                                    <li><a href="local-listings.php?state=Arkansas">Arkansas </a></li>
+                                    <li><a href="local-listings.php?state=California">California</a> </li>
+                                    <li><a href="local-listings.php?state=Colorado">Colorado </a></li>
+                                    <li><a href="local-listings.php?state=Connecticut">Connecticut</a> </li>
+                                    <li><a href="local-listings.php?state=District of Columbia">District of Columbia </a></li>
+                                    <li><a href="local-listings.php?state=Florida">Florida </a></li>
+                                    <li><a href="local-listings.php?state=Georgia">Georgia </a></li>
+                                    <li><a href="local-listings.php?state=Hawaii">Hawaii </a></li>
+                                    <li><a href="local-listings.php?state=Idaho">Idaho </a></li>
+                                    <li><a href="local-listings.php?state=Illinois">Illinois </a></li>
+                                    <li><a href="local-listings.php?state=Indiana">Indiana </a></li>
+                                    <li><a href="local-listings.php?state=Iowa">Iowa </a></li>
+                                    <li><a href="local-listings.php?state=Kansas">Kansas </a></li>
+                                    <li><a href="local-listings.php?state=Kentucky">Kentucky </a></li>
+                                    <li><a href="local-listings.php?state=Louisiana">Louisiana </a></li>
+                                    <li><a href="local-listings.php?state=Maine">Maine </a></li>
+                                    <li><a href="local-listings.php?state=Maryland">Maryland </a></li>
+                                    <li><a href="local-listings.php?state=Massachusetts">Massachusetts </a></li>
+                                    <li><a href="local-listings.php?state=Michigan">Michigan </a></li>
+                                    <li><a href="local-listings.php?state=Minnesota">Minnesota </a></li>
+                                    <li><a href="local-listings.php?state=Mississippi">Mississippi </a></li>
+                                    <li><a href="local-listings.php?state=Missouri">Missouri </a></li>
+                                    <li><a href="local-listings.php?state=Nebraska">Nebraska </a></li>
+                                    <li><a href="local-listings.php?state=Nevada">Nevada </a></li>
+                                    <li><a href="local-listings.php?state=New Mexico">New Mexico </a></li>
+                                    <li><a href="local-listings.php?state=New York">New York </a></li>
+                                    <li><a href="local-listings.php?state=North Carolina">North Carolina </a></li>
+                                    <li><a href="local-listings.php?state=North Dakota">North Dakota </a></li>
+                                    <li><a href="local-listings.php?state=Ohio">Ohio </a></li>
+                                    <li><a href="local-listings.php?state=Oklahoma">Oklahoma </a></li>
+                                    <li><a href="local-listings.php?state=Oregon">Oregon </a></li>
+                                    <li><a href="local-listings.php?state=Pennsylvania">Pennsylvania </a></li>
+                                    <li><a href="local-listings.php?state=Rhode Island">Rhode Island </a></li>
+                                    <li><a href="local-listings.php?state=South Carolina">South Carolina </a></li>
+                                    <li><a href="local-listings.php?state=South Dakota">South Dakota </a></li>
+                                    <li><a href="local-listings.php?state=Tennessee">Tennessee </a></li>
+                                    <li><a href="local-listings.php?state=Texas">Texas </a></li>
+                                    <li><a href="local-listings.php?state=Utah">Utah </a></li>
+                                    <li><a href="local-listings.php?state=Virginia">Virginia </a></li>
+                                    <li><a href="local-listings.php?state=Washington">Washington </a></li>
+                                    <li><a href="local-listings.php?state=West Virginia">West Virginia </a></li>
+                                    <li><a href="local-listings.php?state=Wisconsin">Wisconsin </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-lg-8 col-lg-offset-2">
+                <h1 class="title">Local Listings</h1>
+                <h2 class="sub">Watch Couples Court With The Cutlers in your area.</h2>
+            </div>
+            <div class="col-lg-6 col-lg-offset-3">
+              <div class="listing-provider">
+                  <div class="row hidden-sm big-bar">
+                      <div class="col-sm-2 col-sm-offset-2 col-lg-2 col-lg-offset-2 heading city"><span class="title city-heading">City</span></div>
+                      <div class="col-sm-2 col-lg-2 heading station"><span class="station station-heading">Station</span></div>
+                      <div class="col-sm-4 col-lg-4 heading times"><span class="section-break"></span><span class="times times-heading">Days And Times</span></div>
+                  </div>
+                  <div class="row visible-sm">
+                      <div class="col-sm-12 heading"><span>City, Station, Days and Times</span></div>
+                  </div>
+                  <div class="row">
+                      <div class="listings content col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 mCustomScrollbar _mCS_1"><div class="mCustomScrollBox mCS-light" id="mCSB_1" style="position:relative; height:100%; overflow:hidden; max-width:100%;"><div class="mCSB_container" style="position:relative; top:0;">
+                          <ul class="clearfix">
+                              <li class="row">
+                                  <div class="col-sm-3 col-lg-3 city"><span class="title city-heading">Birmingham</span></div>
+                                  <div class="col-sm-3 col-lg-3 station"><span class="station station-heading"><a href="http://www.wtto21.com/" target="_new">WTTO</a></span></div>
+                                  <div class="col-sm-6 col-lg-6 times"><span class="times times-heading">M-F 9:00AM, 9:30AM</span></div>
+                              </li><li class="row">
+                                  <div class="col-sm-3 col-lg-3 city"><span class="title city-heading">Mobile</span></div>
+                                  <div class="col-sm-3 col-lg-3 station"><span class="station station-heading"><a href="http://www.utv44.com/" target="_new">WJTC</a></span></div>
+                                  <div class="col-sm-6 col-lg-6 times"><span class="times times-heading">M-F 2:00PM, 2:30PM</span></div>
+                              </li><li class="row">
+                                  <div class="col-sm-3 col-lg-3 city"><span class="title city-heading">Huntsville</span></div>
+                                  <div class="col-sm-3 col-lg-3 station"><span class="station station-heading"><a href="http://www.lbgtv.com/category/233177/valleys-cw" target="_new">WHDF</a></span></div>
+                                  <div class="col-sm-6 col-lg-6 times"><span class="times times-heading">M-F 4:00PM, 4:30PM</span></div>
+                              </li><li class="row">
+                                  <div class="col-sm-3 col-lg-3 city"><span class="title city-heading">Montgomery</span></div>
+                                  <div class="col-sm-3 col-lg-3 station"><span class="station station-heading"><a href="http://www.wcov.com/" target="_new">WCOV</a></span></div>
+                                  <div class="col-sm-6 col-lg-6 times"><span class="times times-heading">M-F 2:00PM, 2:30PM, 1:00AM</span></div>
+                              </li>                            </ul>
+                      </div><div class="mCSB_scrollTools" style="position: absolute; display: block;"><div class="mCSB_draggerContainer"><div class="mCSB_dragger" style="position: absolute; height: 129px; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="position: relative; line-height: 129px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+                  </div>
+                </div>
+            </div>
+        </div>
+      <div class="container-fluid info"> 
+        <div class="jumbotron footer">
+        <p>TM &amp; &copy; Orion TV Productions, Inc. All Rights Reserved. Advertisements Do No Constitute Endorsement By Orion Television Or By Any Person(s) Pictured On This Page. Use Of This Site Constitutes Your Acceptance Of These Terms Of Use And Privacy Policy. <img src="./media/images/orion.jpg" alt="Orion"></p>
+      </div>
+      </div>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>TM &amp; &copy; Orion TV Productions, Inc. All Rights Reserved. Advertisements Do No Constitute Endorsement By Orion Television Or By Any Person(s) Pictured On This Page. Use Of This Site Constitutes Your Acceptance Of These Terms Of Use And Privacy Policy.</p>
-  </footer>
-
-</div><!-- /.container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+    </div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+     
+      ga('create', 'UA-102187534-1', 'auto');
+      ga('send', 'pageview');
+     
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="./../media/js/jquery.min.js"><\/script>')</script>
     <script src="./../media/js/bootstrap.min.js"></script>

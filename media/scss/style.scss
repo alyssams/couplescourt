@@ -2,10 +2,12 @@
 
 $grey: #e3e3e3;
 $red: #7d1316;
+$white: #ffffff;
 $black: #000000;
 $bopaque: rgba(0, 0, 0, 0.38);
-$ropaque: rgba(125, 19, 22, 0.49);
+$ropaque: rgba(107, 11, 31, 0.49);
 $lightgrey: #838484;
+$bg: #f7f9fb;
 
 html, body {
   height: 100%;
@@ -15,9 +17,8 @@ html, body {
   margin: 0;
   font-family: 'Teko', sans-serif;
   font-weight: 300;
+  background: $bg;
 }
-
-// stationfinder -   font-family: 'Raleway', sans-serif;
 
 h2, p {
   font-weight: 300;
@@ -34,6 +35,10 @@ h2, p {
     padding: 0;
 }
 
+.nav > li > a {
+  padding: 15px 20px;
+}
+
 .navbar {
   text-transform: uppercase;
   margin: 0;
@@ -43,12 +48,21 @@ h2, p {
 }
 
 .navbar-default {
+  .navbar-toggle {
+    border-color: transparent;
+    &:focus, .navbar-default .navbar-toggle:hover {
+      background-color: transparent;
+    }
+    .icon-bar {
+      background-color: $black;
+    }
+  }
   .navbar-nav {
     width: 100%;
     text-align: center;
     > .active > a {
-      color: $red;
-      background-color: transparent;
+      color: $red !important;
+      background-color: transparent !important;
     }
     > li {
       float: none;
@@ -88,6 +102,7 @@ h2, p {
       float: left;
       margin-left: 2px;
       text-indent: -9999px;
+      list-style: none;
       a {
         display: block;
         width: 53px;
@@ -99,7 +114,14 @@ h2, p {
 }
 
 
-
+.carousel {
+  background: url(../images/background.png) no-repeat;
+  width: 100%;
+  height: 94%;
+  background-size: contain;
+  margin-bottom: 0;
+  overflow: hidden;
+}
 
 .carousel-indicators {
   display: none !important;
@@ -112,10 +134,20 @@ h2, p {
     margin: 0;
 }
 
+.carousel .item {
+  background-color: transparent;
+}
+
 .container-fluid .jumbotron {
   border-radius: 0;
   padding: 0;
   margin: 0;
+}
+
+.logo-bio {
+  position: absolute;
+  top: 70px;
+  right: 100px;
 }
 
 .info {
@@ -127,8 +159,17 @@ h2, p {
   width:100%;
   .promo {
     background-color: $bopaque;
-    color: $lightgrey;
-    font-size:3em;
+    margin-top: 15px;
+    a {
+      color: $lightgrey;
+      font-size:3em;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-decoration: none;
+      img {
+        margin-top: -6px;
+      }
+    }
   }
   .myBackground {
     background-color: $ropaque;
@@ -137,35 +178,14 @@ h2, p {
 }
 
 
-footer {
+.footer {
   background-color: #e3e3e3;
+  p {
+    font-size: 12px;
+    padding: 20px 140px;
+    color: $lightgrey;
+  }
 }
-
-// .info {
-//   h1, p {
-//     text-align: center;
-//   }
-//   .translucent {  
-//       position: absolute;
-//       /* top: 0; */
-//       bottom: 0;
-//       left: 0;
-//       height: 40%;
-//       width: 100%;
-//       color: white;
-//       background-color: #6b0b1f;
-//       opacity: 0.6; 
-//       -moz-opacity: 0.3;  
-//       filter:alpha(opacity=30);  
-//   } 
-//   .content {
-//     // background: #6b0b1f;
-//     // opacity: .5;
-//     color: white;
-//     position: relative;  
-//     width:100%; 
-//   }
-// }
 
 h3 {
   display: inline-block;
@@ -198,11 +218,12 @@ h3 {
     left:0;opacity:1;z-index:1;
 }
 
-.blok1 {
+.biobg {
   height: 100%;
-  background-image: url(http://cdn.wonderfulengineering.com/wp-content/uploads/2014/05/city-wallpaper-7.jpg);
+  background-image: url(../images/bio.png);
   background-position: center center;
-  background-size: cover; 
+  background-size: contain; 
+  background-repeat: no-repeat;
 }
 
 .jumbotron {
@@ -213,21 +234,120 @@ h3 {
 }
 
 
-.finder-bg {
+.finderbg {
   height: 100%;
-  background-image: url(../../media/images/finder_bg.png);
-  background-position: top center;
-  background-size: cover; 
+  background-image: url(../images/finder.png);
+  background-position: center center;
+  background-size: contain; 
+  background-repeat: repeat;
 }
 
-footer {
-  padding: 40px;
-  font-size: 8px;
+.navbar-collapse.in {
+  position: absolute;
+  background-color: white;
+  overflow: overlay;
+  z-index: 999;
+  width: 100%;
+}
+
+
+// STATIONS
+.station-container {
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 200px;
+  h1 {
+    text-transform: uppercase;
+  }
+  h1, h2 {
+    color: $white;
+    text-align: center;
+  }
+  .finder-container {
+    min-height: 220px;
+  }
+  .selector {
+    background: $white;
+    width: 255px;
+    height: 43px;
+    margin: 0 auto;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: $grey;
+      & > .arrows {
+        // background: url(../img/sf-arrows.gif) no-repeat 0 0;
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        float: right;
+        margin-top: 14px;
+        margin-right: 20px;
+      }
+      .title {
+        text-transform: uppercase;
+        color: $red;
+        text-align: center;
+        display: block;
+        line-height: 43px;
+      }
+    }
+    .state-list {
+      display: none;
+      width:100%;
+    }
+    .list-container {
+      overflow: hidden;
+      width:100%;
+      height: 150px;
+      ul li a {
+        border: 3px solid $grey;
+        border-radius: 5px;
+        padding: 9px;
+        background: $red;
+        text-align: center;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+.listing-provider {
+  border: 3px solid $grey;
+  border-radius: 5px;
+  background: $red;
   text-align: center;
-  color: $lightgrey;
+  font-size: 16px;
+  .big-bar {
+    background: $white;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    
+    margin: 0 auto;
+    .headings {
+      color: $red;
+    }
+  }
+  .listings .city{
+      color: $white;
+  }
+  .listings .station a{
+      color: $grey;
+  }
+  .listings .times{
+      color: $white;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .navbar {
+    z-index: 999;
+  }
   .navbar .navbar-brand {
     display: block;
     padding: 5px 15px;
@@ -251,5 +371,36 @@ footer {
   .container-fluid .jumbotron {
     padding: 0 20px;
   }
-  .jumbotron .myBackground br { content: ' '; }
+  .jumbotron .myBackground br { 
+    content: ' '; 
+  }
+  .biobg {
+    background-size: cover;
+  }
+  .logo-bio {
+    display: none;
+  }
+  .footer p {
+    padding: 20px;
+    font-size: 8px;
+   }
+}
+
+@media (max-width: 320px) {
+  h2 {
+    font-size: 20px;
+  }
+  .info .promo a {
+    font-size: 2em;
+  }
+  .jumbotron p {
+    font-size: 16px;
+  }
+  .carousel {
+    height: 90%;
+  }
+ .footer p {
+  padding: 20px;
+  font-size: 8px;
+ }
 }
