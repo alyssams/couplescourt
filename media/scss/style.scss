@@ -3,8 +3,9 @@
 $grey: #e3e3e3;
 $red: #7d1316;
 $black: #000000;
-$lightgrey: #a0a1a0;
-
+$bopaque: rgba(0, 0, 0, 0.38);
+$ropaque: rgba(125, 19, 22, 0.49);
+$lightgrey: #838484;
 
 html, body {
   height: 100%;
@@ -17,6 +18,10 @@ html, body {
 }
 
 // stationfinder -   font-family: 'Raleway', sans-serif;
+
+h2, p {
+  font-weight: 300;
+}
 
 
 *,
@@ -32,6 +37,9 @@ html, body {
 .navbar {
   text-transform: uppercase;
   margin: 0;
+  .navbar-brand {
+    display: none;
+  }
 }
 
 .navbar-default {
@@ -52,6 +60,8 @@ html, body {
     }
   }
 }
+
+
 
 .navbar-nav li.social {
   ul {
@@ -89,6 +99,8 @@ html, body {
 }
 
 
+
+
 .carousel-indicators {
   display: none !important;
 }
@@ -114,11 +126,12 @@ html, body {
   text-align: center;
   width:100%;
   .promo {
-    background-color: $black;
-    color: #333;
+    background-color: $bopaque;
+    color: $lightgrey;
+    font-size:3em;
   }
   .myBackground {
-    background-color: $red;
+    background-color: $ropaque;
     color: #ffffff;
   }
 }
@@ -185,16 +198,20 @@ h3 {
     left:0;opacity:1;z-index:1;
 }
 
-
-
-
-
 .blok1 {
   height: 100%;
   background-image: url(http://cdn.wonderfulengineering.com/wp-content/uploads/2014/05/city-wallpaper-7.jpg);
   background-position: center center;
   background-size: cover; 
 }
+
+.jumbotron {
+  p {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
 
 .finder-bg {
   height: 100%;
@@ -210,4 +227,29 @@ footer {
   color: $lightgrey;
 }
 
-
+@media (max-width: 768px) {
+  .navbar .navbar-brand {
+    display: block;
+    padding: 5px 15px;
+  }
+  .navbar-header {
+    background: $red;
+  }
+  .navbar-nav {
+    margin: 0;
+  }
+  .navbar-default .navbar-nav > li {
+    display: block;
+    float: none !important;
+  }
+  .info .logo {
+    display: none;
+  }
+  .full-screen {
+    background-size: cover;
+  }
+  .container-fluid .jumbotron {
+    padding: 0 20px;
+  }
+  .jumbotron .myBackground br { content: ' '; }
+}
