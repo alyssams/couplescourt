@@ -29,25 +29,63 @@ html, body {
     padding: 0;
 }
 
-
-
 .navbar {
   text-transform: uppercase;
   margin: 0;
 }
 
-.navbar-nav {
-  width: 100%;
-  text-align: center;
-  > li {
-    float: none;
-    display: inline-block;
+.navbar-default {
+  .navbar-nav {
+    width: 100%;
+    text-align: center;
+    > .active > a {
+      color: $red;
+      background-color: transparent;
+    }
+    > li {
+      float: none;
+      display: inline-block;
+      > a {
+        font-size: 20px;
+        font-weight: 400;
+      }
+    }
   }
 }
 
-.navbar-default .navbar-nav>.active>a {
-  color: $red;
-  background-color: transparent;
+.navbar-nav li.social {
+  ul {
+    display: inline-block;
+    .twitter a {
+      background-position: -117px 0px;
+      &:hover {
+        background-position: -117px -53px;
+      }
+    }
+    .facebook a {
+      background-position: -3px -54px;
+      &:hover {
+        background-position: -57px -54px;
+      }
+    }
+    .instagram a {
+      background-position: 0px 0;
+      &:hover {
+        background-position: -55px 0px;
+      }
+    }
+    li {
+      float: left;
+      margin-left: 2px;
+      text-indent: -9999px;
+      a {
+        display: block;
+        width: 53px;
+        height: 43px;
+        background: url(../images/social.png) no-repeat 0 0;
+      }
+    }
+  }
 }
 
 
@@ -74,6 +112,7 @@ html, body {
   z-index: 9;
   padding: 0;
   text-align: center;
+  width:100%;
   .promo {
     background-color: $black;
     color: #333;
