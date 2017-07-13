@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:500|Teko:300,400');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,500|Teko:300,400');
 
 $grey: #e3e3e3;
 $red: #7d1316;
 $white: #ffffff;
 $black: #000000;
-$bopaque: rgba(0, 0, 0, 0.38);
-$ropaque: rgba(107, 11, 31, 0.49);
+$bopaque: rgba(0, 0, 0, 0.72);
+$ropaque: rgba(90, 6, 21, 0.82);
 $lightgrey: #838484;
 $bg: #f7f9fb;
 
@@ -24,6 +24,12 @@ h2, p {
   font-weight: 300;
   margin: 0;
   padding: 0;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
 }
 
 
@@ -62,7 +68,7 @@ h2, p {
   .navbar-nav {
     width: 100%;
     text-align: center;
-    margin: 0 40px;
+    margin: 0 90px;
     > .active > a {
       color: $red !important;
       background-color: transparent !important;
@@ -70,8 +76,9 @@ h2, p {
     > li {
       float: none;
       display: inline-block;
+      margin-left:-10px;
       > a {
-        font-size: 22px;
+        font-size: 23px;
         font-weight: 400;
       }
     }
@@ -81,6 +88,8 @@ h2, p {
 
 
 .navbar-nav li.social {
+  position: relative;
+  left: -60px;
   ul {
     display: inline-block;
     .twitter a {
@@ -147,16 +156,21 @@ h2, p {
   margin: 0;
 }
 
+.jumbotron p {
+  font-size: 13px;
+}
+
 .logo {
   max-width: 30%;
   width: 350px;
-  min-width: 284px;
+  min-width: 250px;
 }
 
 .logo-bio {
   position: absolute;
   top: 70px;
-  right: 100px;
+  width: 25%;
+  right: 50px;
 }
 
 .info {
@@ -189,6 +203,7 @@ h2, p {
       text-transform: uppercase;
       word-spacing: 5px;
       letter-spacing: 1px;
+      margin-bottom: 15px;
     }
   }
 }
@@ -224,9 +239,10 @@ h2, p {
 .footer {
   background-color: #e3e3e3;
   p {
-    font-size: 10px;
     padding: 5px 140px;
     color: $lightgrey;
+    font-size: 8px;
+    letter-spacing: 0px !important;
   }
 }
 
@@ -389,7 +405,30 @@ h3 {
   }
 }
 
+@media (max-width: 1200px) and (min-width: 768px) {
+  .carousel {
+      background-color: #dfe1e5;
+  }
+  .logo {
+    max-width: 50%;
+    width: 430px;
+  }
+  .navbar-default .navbar-nav {
+    margin: 0 60px;
+  }
+  .biobg {
+    background-size: cover;
+  }
+  .scrolls {
+    width: 80%;
+  }
+}
+
+
 @media (max-width: 767px) {
+  .logo {
+    max-width: 50%;
+  }
   .navbar {
     z-index: 999;
   }
@@ -406,6 +445,10 @@ h3 {
   .navbar-default .navbar-nav > li {
     display: block;
     float: none !important;
+    margin-left: 0;
+  }
+  .navbar-nav li.social {
+    left: 10px;
   }
   // .info .logo {
   //   display: none;
@@ -414,7 +457,7 @@ h3 {
     background-size: cover;
   }
   .container-fluid .jumbotron {
-    padding: 0 20px;
+    padding: 0 5px;
   }
   .jumbotron .myBackground br { 
     content: ' '; 
@@ -425,9 +468,19 @@ h3 {
   .logo-bio {
     display: none;
   }
-  .footer p {
-    padding: 20px;
-    font-size: 8px;
+  //  .info .promo {
+  //   margin: 0;
+  // }
+  .info .myBackground h2 {
+    margin-bottom: 0;
+    font-size: 26px;
+  }
+  .myBackground p {
+    font-size: 12px;
+  }
+ .footer p {
+    padding: 10px;
+    font-size: 6px;
    }
 
    .scrolls {
@@ -436,21 +489,46 @@ h3 {
    }
 }
 
-@media (max-width: 320px) {
-  h2 {
-    font-size: 20px;
+@media (max-width: 414px) {
+  .carousel {
+    height: 95%;
   }
+  .info {
+    background-color: $bopaque;
+    .promo {
+      background-color: transparent;
+    }
+  }
+  .scrolls {
+    height: 260px;
+  }
+
+}
+
+@media (max-width: 320px) {
+  .logo {
+    width: 230px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  .info .myBackground h2 {
+    font-size: 21px;
+  }
+ 
   .info .promo a {
     font-size: 2em;
   }
-  .jumbotron p {
-    font-size: 16px;
+
+  .myBackground p {
+    font-size: 10px;
+    padding:5px;
   }
   .carousel {
     height: 90%;
   }
- .footer p {
-  padding: 20px;
-  font-size: 8px;
- }
+  .scrolls {
+    height: 200px;
+  }
+  
 }
