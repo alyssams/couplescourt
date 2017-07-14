@@ -26,10 +26,17 @@ h2, p {
   padding: 0;
 }
 
+h3 {
+  display: inline-block;
+  padding: 10px;
+  background: #B9121B;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
 p {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
-  font-size: 16px;
 }
 
 
@@ -58,11 +65,14 @@ p {
 .navbar-default {
   .navbar-toggle {
     border-color: transparent;
-    &:focus, .navbar-default .navbar-toggle:hover {
+    &:focus {
+      background-color: transparent;
+    }
+    &:hover{
       background-color: transparent;
     }
     .icon-bar {
-      background-color: $black;
+      background-color: $white;
     }
   }
   .navbar-nav {
@@ -84,8 +94,6 @@ p {
     }
   }
 }
-
-
 
 .navbar-nav li.social {
   position: relative;
@@ -124,7 +132,59 @@ p {
     }
   }
 }
+.jumbotron {
+  p {
+    max-width: 800px;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
+}
 
+
+.finderbg {
+  height: 100%;
+  background-image: url(../images/finder_bg.jpg);
+  background-position: center center;
+  background-size: contain; 
+  background-repeat: repeat;
+}
+
+.us-bg {
+  height: 100%;
+  background-image: url(../images/US.png);
+  background-position: top center;
+  background-size: contain; 
+  background-repeat: no-repeat
+}
+
+.navbar-collapse.in {
+  position: absolute;
+  background-color: white;
+  overflow: overlay;
+  z-index: 999;
+  width: 100%;
+}
+
+.full-screen {
+  // background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.carousel .item {
+    -webkit-transition: opacity 3s; 
+    -moz-transition: opacity 3s; 
+    -ms-transition: opacity 3s; 
+    -o-transition: opacity 3s; 
+    transition: opacity 3s;
+}
+.carousel .active.left {
+    left:0;opacity:0;z-index:2;
+}
+.carousel .next {
+    left:0;opacity:1;z-index:1;
+}
 
 .carousel {
   background: url(../images/background.png) no-repeat;
@@ -157,12 +217,12 @@ p {
 }
 
 .jumbotron p {
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .logo {
   max-width: 30%;
-  width: 350px;
+  width: 400px;
   min-width: 250px;
 }
 
@@ -190,6 +250,8 @@ p {
       text-transform: uppercase;
       letter-spacing: 2px;
       text-decoration: none;
+      position: relative;
+      top:4px;
       img {
         margin-top: -6px;
       }
@@ -207,6 +269,9 @@ p {
     }
   }
 }
+
+
+// BIO PAGE
 
 .scrolls {
   height: 177px;
@@ -235,6 +300,8 @@ p {
   border: 2px solid $white;
 }
 
+// footer
+
 
 .footer {
   background-color: #e3e3e3;
@@ -246,36 +313,7 @@ p {
   }
 }
 
-h3 {
-  display: inline-block;
-  padding: 10px;
-  background: #B9121B;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
 
-.full-screen {
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-  // max-height: 700px;
-  // max-width:900px;
-  // margin: 0 auto;
-}
-
-.carousel .item {
-    -webkit-transition: opacity 3s; 
-    -moz-transition: opacity 3s; 
-    -ms-transition: opacity 3s; 
-    -o-transition: opacity 3s; 
-    transition: opacity 3s;
-}
-.carousel .active.left {
-    left:0;opacity:0;z-index:2;
-}
-.carousel .next {
-    left:0;opacity:1;z-index:1;
-}
 
 .biobg {
   height: 100%;
@@ -285,41 +323,16 @@ h3 {
   background-repeat: no-repeat;
 }
 
-.jumbotron {
-  p {
-    max-width: 800px;
-    margin: 0 auto;
-    letter-spacing: 1px;
-    font-weight: 300;
-  }
-}
-
-
-.finderbg {
-  height: 100%;
-  background-image: url(../images/finder.png);
-  background-position: center center;
-  background-size: contain; 
-  background-repeat: repeat;
-}
-
-.navbar-collapse.in {
-  position: absolute;
-  background-color: white;
-  overflow: overlay;
-  z-index: 999;
-  width: 100%;
-}
-
 
 // STATIONS
-.station-container {
+.station-finder {
+  .station-container {
   font-family: 'Raleway', sans-serif;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  padding: 200px;
+  padding-top: 220px;
   h1 {
     text-transform: uppercase;
   }
@@ -332,7 +345,7 @@ h3 {
   }
   .selector {
     background: $white;
-    width: 255px;
+    width: 300px;
     height: 43px;
     margin: 0 auto;
     a {
@@ -352,6 +365,7 @@ h3 {
       .title {
         text-transform: uppercase;
         color: $red;
+        background-color: $white;
         text-align: center;
         display: block;
         line-height: 43px;
@@ -365,17 +379,38 @@ h3 {
       overflow: hidden;
       width:100%;
       height: 150px;
+      ul {
+        margin: 0; 
+        list-style-type: none; 
+        // padding:0 15px; 
+        position:relative;
+      }
       ul li a {
-        border: 3px solid $grey;
+        border: 1px solid $grey;
         border-radius: 5px;
         padding: 9px;
-        background: $red;
         text-align: center;
-        margin-bottom: 5px;
+        margin: 5px 0;
+        color: $grey;
+        display:block; 
+        text-decoration: none;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        &:hover{ 
+          text-decoration: none; 
+          background:url("../images/select_arrow.gif") no-repeat left center;
+          padding-left: 20px;
+          background-position: 90px;
+          color: $white;
+        }
       }
     }
   }
 }
+}
+
+
 
 .listing-provider {
   border: 3px solid $grey;
@@ -405,6 +440,40 @@ h3 {
   }
 }
 
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+  .jumbotron.myBackground  p {
+    font-size: 20px;
+  }
+  .logo-bio {
+    display: none;
+  }
+
+  .full-screen {
+    background-size: cover;
+  }
+
+  .bio .logo {
+    display: block;
+    margin: 0 auto;
+  }
+  .bio .myBackground {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+   .logo-bio {
+    display: none;
+  }
+  .us-bg {
+    background-size: 160%;
+    background-position: center center;
+  }
+}
+
+// @media (max-width: 900px) {}
+
+
 @media (max-width: 1200px) and (min-width: 768px) {
   .carousel {
       background-color: #dfe1e5;
@@ -419,13 +488,24 @@ h3 {
   .biobg {
     background-size: cover;
   }
+  .bio .myBackground {
+    margin-top: 20px;
+  }
   .scrolls {
     width: 80%;
+  }
+  .us-bg {
+    background-size: 160%;
+    background-position: center center;
   }
 }
 
 
 @media (max-width: 767px) {
+  .us-bg {
+    background-size: 160%;
+    background-position: center center;
+  }
   .logo {
     max-width: 50%;
   }
@@ -457,7 +537,7 @@ h3 {
     background-size: cover;
   }
   .container-fluid .jumbotron {
-    padding: 0 5px;
+    padding: 5px;
   }
   .jumbotron .myBackground br { 
     content: ' '; 
@@ -493,42 +573,90 @@ h3 {
   .carousel {
     height: 95%;
   }
+  .logo {
+    min-width: 160px;
+    // margin-bottom: 5px;
+  }
   .info {
+    padding-top: 10px;
     background-color: $bopaque;
     .promo {
       background-color: transparent;
+      padding: 0;
+    }
+    .promo a {
+      font-size: 1.3em;
+      img {
+        margin-top: -2px;
+        width: 7%;
+      }
     }
   }
   .scrolls {
-    height: 260px;
+    height: 180px;
   }
 
 }
 
 @media (max-width: 320px) {
-  .logo {
-    width: 230px;
-  }
+  
   h2 {
     font-size: 18px;
   }
-  .info .myBackground h2 {
-    font-size: 21px;
-  }
- 
-  .info .promo a {
-    font-size: 2em;
-  }
-
-  .myBackground p {
-    font-size: 10px;
-    padding:5px;
-  }
+  .info {
+    .promo a {
+      font-size: 1.3em;
+      img {
+        margin-top: -2px;
+        width: 7%;
+      }
+    }
+    .myBackground {
+      h2 {
+        font-size: 14px;
+        padding-top: 5px;
+      }
+       p {
+        font-size: 10px;
+        letter-spacing: 0;
+        padding:5px;
+      }
+    }
+  } 
   .carousel {
     height: 90%;
   }
   .scrolls {
-    height: 200px;
+    height: 100px;
+  }
+  br {
+    display: none;
   }
   
 }
+
+/**station finder Styles*/
+.station-finder .banner-extender {background-image:url("../img/pat-full-other.jpg");}
+.station-finder #primary-logo {background: url("../img/pat-full-other.jpg") no-repeat center 30px; min-height: 190px; padding:0;}
+.station-finder .wrapper
+{
+    background: #fff url("../img/station-bg.jpg") no-repeat center center;
+  background-color: #3e5c9b\9; /* IE 8 Fix */
+    background-size: cover;
+}
+.station-finder h1.title {margin-bottom:0px;}
+.station-finder h2.sub
+{
+    margin-top:10px;
+    font-size:20px; text-align: center;
+    margin-bottom:20px;
+}
+
+.station-finder .selector
+{
+    background: url("../img/select-bg.png") no-repeat 0 0;
+    width: 255px;
+    height: 43px;
+    margin: 0 auto;
+}
+
