@@ -7,7 +7,17 @@ $black: #000000;
 $bopaque: rgba(0, 0, 0, 0.72);
 $ropaque: rgba(90, 6, 21, 0.82);
 $lightgrey: #838484;
-$bg: #f7f9fb;
+$bg: #bbc1ca;
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 html, body {
   height: 100%;
@@ -17,7 +27,17 @@ html, body {
   margin: 0;
   font-family: 'Teko', sans-serif;
   font-weight: 300;
-  background: $bg;
+  background-color: $bg;
+}
+
+.bioo {
+  background: url(../images/background.png) no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  margin-bottom: 0;
+  overflow: hidden;
+  background-color:$bg;
 }
 
 h2, p {
@@ -39,16 +59,21 @@ p {
   font-weight: 300;
 }
 
+//close button
 
-*,
-*:after,
-*:before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+.modal-header {
+  padding:0;
+  .close {
+    margin-right: 20px;
+    margin-top: 0;
+  }
 }
+
+.close {
+  font-size: 50px;
+}
+
+// end of close btn
 
 .nav > li > a {
   padding: 15px 20px;
@@ -168,7 +193,7 @@ p {
 }
 
 .full-screen {
-  // background-size: cover;
+  background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -245,7 +270,9 @@ p {
     background-color: $bopaque;
     margin: 10px 0;
     padding: 5px;
-    a {
+    button {
+      background-color: transparent;
+      border-color: transparent;
       color: $lightgrey;
       font-size:3em;
       text-transform: uppercase;
@@ -258,6 +285,39 @@ p {
       }
     }
   }
+
+  .btn-primary {
+    background: transparent !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    &:hover {
+      background: transparent;
+      background-color: transparent;
+      // border-color: transparent;
+    }
+    &:active {
+      background: transparent;
+      background-color: transparent;
+      border-color: transparent;
+    }
+    &:focus {
+      background: transparent;
+      background-color: transparent;
+      border-color: transparent;
+    }
+    &:visited {
+      background: transparent;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  button:active, .button:active, button:focus, .button:focus, button:hover, .button:hover{
+      outline:transparent !important;
+  }
+
+
+
   .myBackground {
     background-color: $ropaque;
     color: #ffffff;
@@ -325,6 +385,7 @@ p {
 }
 
 
+
 // STATIONS
 .station-finder {
   .station-container {
@@ -366,10 +427,15 @@ p {
       .title {
         text-transform: uppercase;
         color: $red;
-        background-color: $white;
+        background-color: #e2e2e2;
         text-align: center;
         display: block;
         line-height: 43px;
+        img {
+          position: relative;
+          top: -2px;
+          left: 5px;
+        }
       }
     }
     .state-list {
@@ -441,6 +507,12 @@ p {
   }
 }
 
+@media (min-width:1700px) {
+  .logo {
+    width:20%;
+  }
+}
+
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
   .jumbotron.myBackground  p {
     font-size: 20px;
@@ -472,12 +544,17 @@ p {
   }
 }
 
-// @media (max-width: 900px) {}
+@media (min-width: 768px){
+  .modal-dialog {
+    width: 80%;
+    margin: 30px auto;
+  }
+}
 
 
 @media (max-width: 1200px) and (min-width: 768px) {
   .carousel {
-      background-color: #dfe1e5;
+      background-color: $bg;
   }
   .logo {
     max-width: 50%;
@@ -499,6 +576,9 @@ p {
     background-size: 160%;
     background-position: center center;
   }
+  .myBackground.jumbotron p {
+    padding: 0 3%;
+  }
 }
 
 
@@ -508,7 +588,7 @@ p {
     background-position: center center;
   }
   .logo {
-    max-width: 50%;
+    max-width: 40%;
   }
   .navbar {
     z-index: 999;
@@ -567,6 +647,10 @@ p {
    .scrolls {
     width: 100%;
     height: 330px;
+    padding: 5%;
+   }
+   .info .promo {
+    margin-top: 0;
    }
 }
 
@@ -575,28 +659,30 @@ p {
     height: 95%;
   }
   .logo {
-    min-width: 160px;
+    min-width: 130px;
+    padding:10px 0;
     // margin-bottom: 5px;
   }
   .info {
-    padding-top: 10px;
     background-color: $bopaque;
     .promo {
       background-color: transparent;
       padding: 0;
     }
-    .promo a {
+    .promo button {
       font-size: 1.3em;
       img {
         margin-top: -2px;
-        width: 7%;
+        width: 16%;
       }
     }
   }
   .scrolls {
     height: 180px;
   }
-
+  .footer p {
+    padding:0;
+  }
 }
 
 @media (max-width: 320px) {
@@ -605,11 +691,11 @@ p {
     font-size: 18px;
   }
   .info {
-    .promo a {
+    .promo button {
       font-size: 1.3em;
       img {
         margin-top: -2px;
-        width: 7%;
+        width: 14%;
       }
     }
     .myBackground {
@@ -620,7 +706,7 @@ p {
        p {
         font-size: 10px;
         letter-spacing: 0;
-        padding:5px;
+        padding: 0 5px
       }
     }
   } 
@@ -629,6 +715,7 @@ p {
   }
   .scrolls {
     height: 100px;
+    padding: 0% 5%;
   }
   br {
     display: none;
