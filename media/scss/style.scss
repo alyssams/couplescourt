@@ -30,6 +30,10 @@ html, body {
   background-color: $bg;
 }
 
+.row {
+  margin: 0;
+}
+
 .bioo {
   background: url(../images/background.png) no-repeat;
   width: 100%;
@@ -39,6 +43,15 @@ html, body {
   overflow: hidden;
   background-color:$bg;
 }
+
+h1 {
+    font-size:3em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $white;
+}
+
+
 
 h2, p {
   font-weight: 300;
@@ -246,6 +259,10 @@ p {
   font-size: 14px;
 }
 
+.home .jumbotron p {
+  padding: 0 102px;
+}
+
 .logo {
   max-width: 30%;
   width: 400px;
@@ -334,8 +351,12 @@ p {
 
 // BIO PAGE
 
+.info.bio .myBackground {
+  margin-top: 10px;
+}
+
 .scrolls {
-  height: 177px;
+  height: 170px;
   width: 60%;
   margin: 0 auto;
   padding: 1%;
@@ -363,15 +384,12 @@ p {
 
 // footer
 
-
 .footer {
   background-color: #e3e3e3;
-  p {
-    padding: 5px 140px;
-    color: $lightgrey;
-    font-size: 8px;
-    letter-spacing: 0px !important;
-  }
+  padding: 10px !important;
+  color: $lightgrey;
+  font-size: 8px;
+  letter-spacing: 0px !important;
 }
 
 
@@ -516,6 +534,7 @@ p {
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
   .jumbotron.myBackground  p {
     font-size: 20px;
+    padding: 0;
   }
   .logo-bio {
     display: none;
@@ -532,6 +551,9 @@ p {
   .bio .myBackground {
     margin-top: 20px;
   }
+  .station-finder h2.sub {
+    padding: 10px 80px;
+  }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
@@ -541,6 +563,9 @@ p {
   .us-bg {
     background-size: 160%;
     background-position: center center;
+  }
+  .station-finder h2.sub {
+    padding: 10px 150px;
   }
 }
 
@@ -583,6 +608,17 @@ p {
 
 
 @media (max-width: 767px) {
+  h1 {
+    font-size: 2em;
+  }
+  .station-finder h2.sub {
+    font-size: 1em !important;
+    padding: 10px 50px;
+  }
+
+  .home .jumbotron p {
+    padding: 0 10px;
+  }
   .us-bg {
     background-size: 160%;
     background-position: center center;
@@ -629,15 +665,15 @@ p {
   .logo-bio {
     display: none;
   }
-  //  .info .promo {
-  //   margin: 0;
-  // }
   .info .myBackground h2 {
     margin-bottom: 0;
-    font-size: 26px;
+    font-size: 17px;
+  }
+  .info .myBackground p {
+    padding: 0px 20px;
   }
   .myBackground p {
-    font-size: 12px;
+    font-size: 11px;
   }
  .footer p {
     padding: 10px;
@@ -691,8 +727,8 @@ p {
     font-size: 18px;
   }
   .info {
-    .promo button {
-      font-size: 1.3em;
+    .promo button  {     
+    font-size: 1.3em;
       img {
         margin-top: -2px;
         width: 14%;
@@ -720,6 +756,14 @@ p {
   br {
     display: none;
   }
+
+  .station-finder .station-container {
+    padding-top: 120px;
+  }
+
+  .station-finder h2.sub {
+    padding: 10px 40px;
+  }
   
 }
 
@@ -736,8 +780,12 @@ p {
 .station-finder h2.sub
 {
     margin-top:10px;
-    font-size:20px; text-align: center;
-    margin-bottom:20px;
+    font-size:30px;
+    word-spacing: 5px;
+    letter-spacing: 1px;
+    font-weight:300; 
+    text-align: center;
+    // margin-bottom:20px;
 }
 
 .station-finder .selector

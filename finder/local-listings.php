@@ -82,33 +82,38 @@ $list = "<li class='row'>
         <div class="container-fluid finderbg">
             <div class="us-bg"></div>
         </div>
-        <div class='row'>
-            <div class='col-lg-12'>
-                <h3 class='state-name'><?php echo $state; ?></h3>
-                <div class='listing-provider'>
-                    <div class='row hidden-sm big-bar'>
-                        <div class='col-sm-2 col-sm-offset-2 col-lg-2 col-lg-offset-2 heading city'><span class='title city-heading'>City</span></div>
-                        <div class='col-sm-2 col-lg-2 heading station'><span class='station station-heading'>Station</span></div>
-                        <div class='col-sm-4 col-lg-4 heading times'><span class='section-break'></span><span class='times times-heading'>Days And Times</span></div>
-                    </div>
-                    <div class='row visible-sm'>
-                        <div class='col-sm-12 heading'><span>City, Station, Days and Times</span></div>
-                    </div>
-                    <div class='row'>
-                        <div class='listings content col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2'>
-                            <ul class='clearfix'>
-                                <?php echo $list; ?>
-                            </ul>
+        <img class="logo-bio" src="./../media/images/cc_logo.png" alt="Couples Court with the Cutlers">
+        <div class="row">
+            <div class='row station-container'>
+                <div class='col-lg-4 col-lg-offset-4'>
+                    <h2 class='state-name'><?php echo $state; ?></h2>
+                    <div class='listing-provider'>
+                        <div class='row hidden-sm big-bar'>
+                            <div class='col-sm-2 col-sm-offset-2 col-lg-2 col-lg-offset-2 heading city'><span class='title city-heading'>City</span></div>
+                            <div class='col-sm-2 col-lg-2 heading station'><span class='station station-heading'>Station</span></div>
+                            <div class='col-sm-4 col-lg-4 heading times'><span class='section-break'></span><span class='times times-heading'>Days And Times</span></div>
                         </div>
+                        <div class='row visible-sm'>
+                            <div class='col-sm-12 heading'><span>City, Station, Days and Times</span></div>
+                        </div>
+                        <div class='row'>
+                            <div class='listings content col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2'>
+                                <ul class='clearfix'>
+                                    <?php echo $list; ?>
+                                </ul>
+                            </div>
+                        </div>
+                        <h1 class='title'>Local Listings</h1>
+                        <h2 class='sub'>Watch Couple Court With The Cutlers in your area.</h2>
                     </div>
-                    <h1 class='title'>Local Listings</h1>
-                    <h2 class='sub'>Watch Couple Court With The Cutlers in your area.</h2>
+                    <h1>Local Listings</h1>
+                    <h2 class='sub'>Watch Couples Court With The Cutlers in your area.</h2>
                 </div>
             </div>
         </div>
         <div class="container-fluid info">
         <div class="jumbotron footer">
-        <p>TM &amp; &copy; Orion TV Productions, Inc. All Rights Reserved. Advertisements Do No Constitute Endorsement By Orion Television Or By Any Person(s) Pictured On This Page. Use Of This Site Constitutes Your Acceptance Of These Terms Of Use And Privacy Policy. <img src="./../media/images/orion.jpg" alt="Orion"></p>
+        M &amp; &copy; Orion TV Productions, Inc. All Rights Reserved. Advertisements Do No Constitute Endorsement By Orion Television Or By Any Person(s) Pictured On This Page. Use Of This Site Constitutes Your Acceptance Of These Terms Of Use And Privacy Policy. <img src="./../media/images/orion.jpg" alt="Orion">
       </div>
       </div>
     </div>
